@@ -17,8 +17,6 @@ public class SwipeDetection : MonoBehaviour
     }
     protected virtual void OnSwipe(SwipeEventArgs e)
     {
-        EventHandler<SwipeEventArgs> temp = NewSwipe;
-        if (temp != null)
-            temp(this, e);
+        NewSwipe?.Invoke(this, e);
     }
 }
