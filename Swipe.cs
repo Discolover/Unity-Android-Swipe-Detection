@@ -7,13 +7,13 @@ static public class Swipe
     static Vector3 _lastPos;
 
     static bool detected = false;
-    static bool ended = true;
+
     public static bool Detected { get {return detected; } }
     public static void Detection()
     {
         if (Input.touchCount > 0)
         {
-            if (Input.GetTouch(0).phase == TouchPhase.Began &&  ended)
+            if (Input.GetTouch(0).phase == TouchPhase.Began)
             {
                 _firstPos =
                 Camera.main.ScreenToWorldPoint(Input.GetTouch(0).position);
@@ -24,12 +24,9 @@ static public class Swipe
                 _lastPos =
                 Camera.main.ScreenToWorldPoint(Input.GetTouch(0).position);
                 detected = true;
-                ended = false;
+                
             }
-            if (Input.GetTouch(0).phase == TouchPhase.Ended)
-            {
-                ended = true;
-            }
+
         }
     }
     public static Direction GetDirection()
