@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SwipeDetection : MonoBehaviour
 {
-    Direction direction;
+    Swipe_Direction direction;
     public event EventHandler<SwipeEventArgs> NewSwipe;
     void Update()
     {

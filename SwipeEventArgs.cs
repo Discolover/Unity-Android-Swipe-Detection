@@ -1,10 +1,10 @@
 ﻿using System;
 public class SwipeEventArgs : EventArgs
 {
-    private Direction _dir;
-    public SwipeEventArgs(Direction newDirection)
+    private Swipe_Direction _dir;
+    public SwipeEventArgs(Swipe_Direction newDirection)
     {
         _dir = newDirection;
     }
-    public Direction  GetDirection{ get{ return _dir; }}
+    public Swipe_Direction  GetDirection{ get{ return _dir; }}
 }
